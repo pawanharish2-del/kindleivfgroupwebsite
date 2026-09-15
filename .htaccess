@@ -1,9 +1,10 @@
 # ==============================================================================
-# Kindle Womb IVF & Fertility Centre - Apache Configuration
+# Kindle Womb IVF & Fertility Centre - Universal Apache Configuration
 # Canonical Production Domain: https://kindlewombivfgroup.com/
-# Clean Extensionless URLs (No .html in browser)
+# Clean Extensionless URLs (No .html in URL bar)
 # ==============================================================================
 
+Options -MultiViews
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
@@ -21,25 +22,31 @@
     RewriteRule ^(.*)$ https://kindlewombivfgroup.com/$1 [R=301,L]
 
     # 4. Strip .html extension with 301 Permanent Redirect
-    # If the user directly accesses /page.html, 301 redirect to /page
-    RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+    # If a user or crawler lands on /donor-ivf-services.html, redirect to /donor-ivf-services
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+?)\.html[\s?] [NC]
     RewriteRule ^ /%1 [R=301,L]
 
-    # 5. Clean URLs: Internally route clean requests to corresponding .html files
+    # 5. Clean URLs: Internally map clean URL requests to the underlying .html files
+    # Check if request is a directory first
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
 
-    # Rewrite /about to /about.html if it exists
-    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-    RewriteRule ^([^/]+)/?$ $1.html [L]
+    # Strategy A: Using REQUEST_FILENAME
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [NC,L]
 
-    # Rewrite /location-pages/some-page to /location-pages/some-page.html if it exists
-    RewriteCond %{DOCUMENT_ROOT}/location-pages/$1.html -f
-    RewriteRule ^location-pages/([^/]+)/?$ location-pages/$1.html [L]
+    # Strategy B: Fallbacks for subdirectories and root
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^location-pages/([^/]+)/?$ location-pages/$1.html [NC,L]
 
-    # Rewrite /posts/some-post to /posts/some-post.html if it exists
-    RewriteCond %{DOCUMENT_ROOT}/posts/$1.html -f
-    RewriteRule ^posts/([^/]+)/?$ posts/$1.html [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^posts/([^/]+)/?$ posts/$1.html [NC,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^/]+)/?$ $1.html [NC,L]
 </IfModule>
 
 # 6. Custom 404 Error Page
@@ -68,7 +75,7 @@ ErrorDocument 404 /404.html
     ExpiresByType text/javascript "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
     
-    # HTML Files (short cache for quick updates)
+    # HTML Files
     ExpiresByType text/html "access plus 1 hour"
 </IfModule>
 
