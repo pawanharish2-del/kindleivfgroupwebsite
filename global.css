@@ -76,9 +76,12 @@ body {
 }
 
 .logo-img {
-    height: 75px; 
+    height: 80px; 
     width: auto;
+    max-height: 88px;
     object-fit: contain;
+    display: block;
+    transition: height 0.25s ease;
 }
 
 /* Navigation Menu & Pill Items */
@@ -447,7 +450,8 @@ body {
     }
 
     .logo-img {
-        height: 60px;
+        height: 72px;
+        max-height: 80px;
     }
 
     .nav-menu {
@@ -554,14 +558,38 @@ body {
     }
 }
 
-/* --- Tiny Mobile Screens (Max 480px) --- */
+/* --- Mobile Screens (Max 768px) --- */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 68px;
+        max-height: 76px;
+    }
+    .header-container {
+        padding: 10px 18px;
+    }
+}
+
+/* --- Mobile Screens (Max 480px) --- */
 @media (max-width: 480px) {
     .cta-button {
         padding: 8px 16px;
         font-size: 13px;
     }
     .logo-img {
-        height: 50px;
+        height: 62px;
+        max-height: 70px;
+    }
+    .header-container {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+}
+
+/* --- Tiny Mobile Screens (Max 360px) --- */
+@media (max-width: 360px) {
+    .logo-img {
+        height: 56px;
+        max-height: 62px;
     }
 }
 
