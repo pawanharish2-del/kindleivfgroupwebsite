@@ -178,7 +178,7 @@ const doctorHtml = `<!DOCTYPE html>
     <meta property="og:url" content="https://kindlewombivfgroup.com/best-ivf-doctor-jaipur">
     <meta property="og:title" content="Best IVF Doctor in Jaipur">
     <meta property="og:description" content="Connect with renowned infertility experts providing ethical, high-success reproductive medicine in Rajasthan.">
-    <meta property="og:image" content="https://kindlewombivfgroup.com/images/hero-best-ivf-doctor.jpg">
+    <meta property="og:image" content="https://kindlewombivfgroup.com/images/best-ivf-doctor-jaipur.jpg">
     
     <link rel="stylesheet" href="global.css">
 </head>
@@ -203,7 +203,7 @@ const doctorHtml = `<!DOCTYPE html>
 
         <!-- IMAGE PROMPT: Ultra realistic DSLR photography, natural soft sunlight illuminating a cozy room. A newborn baby of Indian ethnicity sleeping face down on a plush, fluffy white rug. The baby is wearing a tiny, soft mustard-yellow knitted cap. Shot from a high overhead angle, shallow depth of field. Warm, hopeful mood. No medical equipment, no text. -->
         <div style="width: 100%; height: 500px; border-radius: 12px; overflow: hidden; margin-bottom: 30px;">
-            <img src="images/hero-best-ivf-doctor.jpg" alt="A newborn on a white rug, representing the joy brought by an expert IVF doctor" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/best-ivf-doctor-jaipur.jpg" alt="A newborn on a white rug, representing the joy brought by an expert IVF doctor" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
 
         <h1 style="color: var(--color-primary-blue); font-size: 2.5rem; border-bottom: 2px solid #eee; padding-bottom: 10px;">Consult the Best IVF Doctor in Jaipur for Personalized Care</h1>
