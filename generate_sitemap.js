@@ -29,23 +29,25 @@ const excludedFiles = [
   'posts/template.html'
 ];
 
-let entries = [];
+let urlMap = new Map();
 
 allHtml.forEach(file => {
-  const norm = file.replace(/\\/g, '/').replace(/^\.\//, '');
+  let norm = file.replace(/\\/g, '/').replace(/^\.\//, '');
   if (excludedFiles.some(ex => norm === ex || norm.endsWith('/' + ex))) return;
 
   const content = fs.readFileSync(file, 'utf8');
-  // Skip if noindex is present
   if (/name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(content)) return;
 
-  const cleanSlug = norm.replace(/\.html$/, '');
+  let cleanSlug = norm.replace(/\.html$/, '');
+  if (cleanSlug.endsWith('/index')) {
+    cleanSlug = cleanSlug.replace(/\/index$/, '');
+  }
 
   let url;
   let priority = '0.7';
   let changefreq = 'weekly';
 
-  if (cleanSlug === 'index') {
+  if (cleanSlug === 'index' || cleanSlug === '') {
     url = `${DOMAIN}/`;
     priority = '1.0';
     changefreq = 'daily';
@@ -53,7 +55,7 @@ allHtml.forEach(file => {
     url = `${DOMAIN}/${cleanSlug}`;
     priority = '0.9';
     changefreq = 'weekly';
-  } else if (cleanSlug === 'iui' || cleanSlug === 'icsi' || cleanSlug === 'donor-ivf-services' || cleanSlug === 'sperm-retrieval' || cleanSlug === 'infertility-assessment' || cleanSlug === 'advance-technology' || cleanSlug === 'gallery' || cleanSlug === 'frequently-asked-questions' || cleanSlug === 'what-is-surrogacy' || cleanSlug === 'blogs' || cleanSlug === 'all-locations') {
+  } else if (cleanSlug === 'iui' || cleanSlug === 'icsi' || cleanSlug === 'donor-ivf-services' || cleanSlug === 'sperm-retrieval' || cleanSlug === 'infertility-assessment' || cleanSlug === 'advance-technology' || cleanSlug === 'gallery' || cleanSlug === 'frequently-asked-questions' || cleanSlug === 'what-is-surrogacy' || cleanSlug === 'blogs' || cleanSlug === 'all-locations' || cleanSlug === 'services' || cleanSlug === 'fertility-enhancing-surgeries') {
     url = `${DOMAIN}/${cleanSlug}`;
     priority = '0.8';
     changefreq = 'weekly';
@@ -71,22 +73,30 @@ allHtml.forEach(file => {
     changefreq = 'monthly';
   }
 
-  // Check file modified time for lastmod
   const stat = fs.statSync(file);
   const mtime = stat.mtime.toISOString().split('T')[0];
 
-  entries.push({
-    url,
-    lastmod: mtime || TODAY,
-    changefreq,
-    priority
-  });
+  if (!urlMap.has(url)) {
+    urlMap.set(url, {
+      url,
+      lastmod: mtime || TODAY,
+      changefreq,
+      priority
+    });
+  }
 });
 
-// Sort entries: root first, then service pages, then locations, then posts
-entries.sort((a, b) => parseFloat(b.priority) - parseFloat(a.priority) || a.url.localeCompare(b.url));
+let entries = Array.from(urlMap.values());
+
+// Sort entries: root first, then by priority, then alphabetically
+entries.sort((a, b) => {
+  if (a.url === `${DOMAIN}/`) return -1;
+  if (b.url === `${DOMAIN}/`) return 1;
+  return parseFloat(b.priority) - parseFloat(a.priority) || a.url.localeCompare(b.url);
+});
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
@@ -106,4 +116,4 @@ entries.forEach(item => {
 xml += `</urlset>\n`;
 
 fs.writeFileSync('sitemap.xml', xml, 'utf8');
-console.log(`Successfully generated sitemap.xml with ${entries.length} clean (extensionless) canonical URLs.`);
+console.log(`Successfully generated deduplicated sitemap.xml with ${entries.length} clean canonical URLs.`);

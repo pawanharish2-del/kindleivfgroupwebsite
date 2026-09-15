@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
@@ -58,6 +59,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kindlewombivfgroup.com/fertility-enhancing-surgeries</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kindlewombivfgroup.com/frequently-asked-questions</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -83,6 +90,12 @@
   </url>
   <url>
     <loc>https://kindlewombivfgroup.com/iui</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kindlewombivfgroup.com/services</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1048,6 +1061,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kindlewombivfgroup.com/posts/template</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kindlewombivfgroup.com/posts/top-fertility-hospital-jaipur</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -1108,12 +1127,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kindlewombivfgroup.com/fertility-enhancing-surgeries</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://kindlewombivfgroup.com/infertility-specialist-jaipur</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -1127,12 +1140,6 @@
   </url>
   <url>
     <loc>https://kindlewombivfgroup.com/ivf-treatment-cost-jaipur</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kindlewombivfgroup.com/services</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
