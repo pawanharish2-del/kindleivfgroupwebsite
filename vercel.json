@@ -1,0 +1,58 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)\\.html",
+      "destination": "/$1",
+      "permanent": true
+    },
+    {
+      "source": "/book-online",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-infertility",
+      "destination": "/infertility-assessment",
+      "permanent": true
+    },
+    {
+      "source": "/media-and-gallery",
+      "destination": "/gallery",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
