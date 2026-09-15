@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & Clinic Gallery | Kindle Womb IVF Jaipur</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore photos and media from Kindle Womb IVF Centre Jaipur. Take a visual tour of our modular embryology cleanrooms, consultation rooms, and patient care facilities.">
+    <meta name="keywords" content="Kindle Womb IVF Gallery, IVF Clinic Photos Jaipur, Embryology Lab Cleanroom Rajasthan, Fertility Centre Infrastructure">
+    <link rel="canonical" href="https://kindlewombivfgroup.com/gallery.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kindlewombivfgroup.com/gallery.html">
+    <meta property="og:title" content="Media & Clinic Gallery | Kindle Womb IVF">
+    <meta property="og:description" content="Take a virtual visual tour of Kindle Womb IVF & Fertility Centre Jaipur.">
+    <meta property="og:image" content="https://kindlewombivfgroup.com/kindle-logo.png">>
+    <meta property="og:site_name" content="Kindle Womb IVF">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kindlewombivfgroup.com/gallery.html">
+    <meta property="twitter:title" content="Media & Clinic Gallery | Kindle Womb IVF">
+    <meta property="twitter:description" content="Explore state-of-the-art facilities at Kindle Womb IVF Centre Jaipur.">
+    <meta property="twitter:image" content="https://static.wixstatic.com/media/82aeb0_19ff5cf6b8f343a493a38a74e0d99dc0~mv2.jpg">
+
+    <!-- Geo/Local SEO Meta Tags -->
+    <meta name="geo.region" content="IN-RJ">
+    <meta name="geo.placename" content="Jaipur">
+    <meta name="geo.position" content="26.8920;75.8156">
+    <meta name="ICBM" content="26.8920, 75.8156">
+
+    <!-- Tailwind, Google Fonts, Font Awesome & Phosphor Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&family=Marcellus&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#5A739C',        // Primary Blue
+                            gold: '#F2B830',        // Golden Yellow
+                            goldDark: '#D4AF37',    // Deep Gold
+                            red: '#E74C3C',         // Warm Red
+                            warmRed: '#A94E46',     // Brand Warm Red
+                            dark: '#2C3E50',        // Dark Slate
+                            charcoal: '#3A2E2F',    // Dark Charcoal
+                            light: '#F8F9FA',       // Background Light
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Marcellus', 'serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                        body: ['Lato', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="global.css">
+
+    <!-- JSON-LD Structured Data for ImageGallery -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Kindle Womb IVF & Fertility Centre Photo Gallery",
+      "description": "Visual tour and photography of clinical cleanrooms, consultation rooms, and infrastructure at Kindle Womb IVF Jaipur.",
+      "url": "https://kindlewombivfgroup.com/gallery.html",
+      "provider": {
+        "@type": "MedicalBusiness",
+        "name": "Kindle Womb IVF & Fertility Centre",
+        "telephone": "+919119107725",
+        "url": "https://kindlewombivfgroup.com/"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --color-primary-blue: #5A739C;
+            --color-golden-yellow: #F2B830;
+            --color-warm-red: #A94E46;
+            --color-dark-charcoal: #3A2E2F;
+            --font-heading: 'Marcellus', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Gallery Card Styles */
+        .gallery-item {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gallery-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .gallery-overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Filter Tab Styles */
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: 1px solid #E2E8F0;
+            background: #FFFFFF;
+            color: var(--color-dark-charcoal);
+        }
+        .filter-btn:hover {
+            border-color: var(--color-primary-blue);
+            color: var(--color-primary-blue);
+        }
+        .filter-btn.active {
+            background: var(--color-primary-blue);
+            color: #FFFFFF;
+            border-color: var(--color-primary-blue);
+            box-shadow: 0 4px 12px rgba(90, 115, 156, 0.3);
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.94);
+            backdrop-filter: blur(8px);
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        /* Location Footer Styling */
+        .global-location-nav {
+            background-color: #2F2425;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding: 30px 40px;
+            margin: 30px 0 20px 0;
+        }
+
+        .global-location-nav h3 {
+            color: var(--color-golden-yellow);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-family: var(--font-heading);
+            font-weight: 400;
+        }
+
+        .global-location-nav h4 {
+            color: #CCCCCC;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .location-links-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+        }
+
+        .location-links-inline a {
+            color: #B0B7C3;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .location-links-inline a:hover {
+            color: var(--color-golden-yellow);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased font-sans m-0 p-0">
+
+    <!-- ==========================================
+         HEADER SECTION
+         ========================================== -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <a href="https://kindlewombivfgroup.com" class="logo-area">
+                <img src="kindle-logo.png" alt="Kindle Womb IVF & Fertility Centre Logo" class="logo-img">
+            </a>
+
+            <!-- Hamburger Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Navigation" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars menu-icon"></i>
+            </button>
+
+            <!-- Navigation Section -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="about.html" class="nav-item">About</a></li>
+                    
+                    <!-- Services Dropdown -->
+                    <li class="dropdown">
+                        <a href="https://kindlewombivfgroup.com/services" class="nav-item">Services <i class="fa-solid fa-arrow-down-long arrow-icon"></i></a>
+                        <div class="dropdown-content grid-dropdown">
+                            <div class="dropdown-grid">
+                                <a href="ivf.html">IVF <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                <a href="donor-ivf-services.html">Donor IVF Services <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                <a href="infertility-assessment.html">Infertility Assessment <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                <a href="iui.html">IUI <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                <a href="https://kindlewombivfgroup.com/fertility-enhancing-surgeries">Fertility Enhancing Surgeries <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                <a href="advance-technology.html">Advance Technology <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                <a href="icsi.html">ICSI <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                <a href="sperm-retrieval.html">Sperm Retrieval <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                <a href="https://kindlewombivfgroup.com/book-online">Book a Consultation <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><a href="ivf-center.html" class="nav-item">IVF Center</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                    <li><a href="gallery.html" class="nav-item active">Gallery</a></li>
+                    
+                    <!-- Patient Zone Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="nav-item">Patient Zone <i class="fa-solid fa-arrow-down-long arrow-icon"></i></a>
+                        <div class="dropdown-content flex-dropdown">
+                            <div class="dropdown-flex-container">
+                                 <a href="https://kindlewombivfgroup.com/what-is-surrogacy">What is surrogacy. <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                 <a href="https://kindlewombivfgroup.com/what-is-infertility">What is Infertility? <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                 <a href="https://kindlewombivfgroup.com/frequently-asked-questions">Frequently Asked Questions <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                 <a href="blogs.html">Blogs <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="cta-area">
+                <a href="tel:+919119107725" class="cta-button">Call Now <i class="fa-solid fa-phone phone-icon"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         HERO BANNER
+         ========================================== -->
+    <section class="relative bg-brand-dark overflow-hidden min-h-[300px] md:min-h-[400px] flex items-center justify-center">
+        <div class="absolute inset-0 opacity-40">
+            <img class="w-full h-full object-cover" src="https://static.wixstatic.com/media/82aeb0_19ff5cf6b8f343a493a38a74e0d99dc0~mv2.jpg" alt="Kindle Womb Reception Gallery">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-brand-blue/30"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-3xl mx-auto fade-in-up py-14">
+            <span class="text-brand-gold font-bold tracking-widest uppercase text-xs">Visual Tour</span>
+            <h1 class="text-3xl md:text-5xl font-serif font-bold text-white mt-2 mb-4">Media & Clinic Gallery</h1>
+            <p class="text-base md:text-lg text-blue-100 font-light leading-relaxed">
+                Take a step inside Kindle Womb IVF Centre. Explore our modular Level-3 embryology cleanrooms, modern consultation suites, and celebrating joyous milestones with our patients.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         GALLERY FILTER & GRID SECTION
+         ========================================== -->
+    <section class="py-14 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn active" onclick="filterGallery('all', this)">All Photos</button>
+                <button class="filter-btn" onclick="filterGallery('cleanrooms', this)">Embryology & Labs</button>
+                <button class="filter-btn" onclick="filterGallery('infrastructure', this)">Clinic Infrastructure</button>
+                <button class="filter-btn" onclick="filterGallery('consultation', this)">Consultation Suites</button>
+                <button class="filter-btn" onclick="filterGallery('moments', this)">Patient Joy & Events</button>
+            </div>
+
+            <!-- Gallery Grid (12 Items) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryContainer">
+                
+                <!-- 1. Reception -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="infrastructure" onclick="openLightbox(0)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/82aeb0_19ff5cf6b8f343a493a38a74e0d99dc0~mv2.jpg" alt="Welcoming Patient Reception Area" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Infrastructure</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Welcoming Patient Reception</h3>
+                    </div>
+                </div>
+
+                <!-- 2. Consultation Lounge -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="consultation" onclick="openLightbox(1)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/82aeb0_a50ea262c5eb445bbdfb4f3b764d2bc3~mv2.jpg" alt="Comfortable Patient Lounges" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wide">Consultation</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Comfortable Patient Lounges</h3>
+                    </div>
+                </div>
+
+                <!-- 3. Doctor Consultation Suite -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="consultation" onclick="openLightbox(2)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/82aeb0_d2a333065a6845cb97d8b5fc2411e74a~mv2.jpg" alt="Private Doctor Consultation Chambers" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wide">Consultation</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Private Doctor Consultation Chambers</h3>
+                    </div>
+                </div>
+
+                <!-- 4. Level-3 Cleanroom Lab -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(3)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/82aeb0_6a1f6e62ea2e4f19896c988f567a85bf~mv2.jpg" alt="Modular Level-3 Embryology Cleanroom" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Embryology</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Modular Level-3 Embryology Cleanroom</h3>
+                    </div>
+                </div>
+
+                <!-- 5. ICSI & Laser Hatching -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(4)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Micromanipulation & Laser Workstation" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Embryology</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Micromanipulation & Laser Workstation</h3>
+                    </div>
+                </div>
+
+                <!-- 6. Operating Theatre -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="infrastructure" onclick="openLightbox(5)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://cdn.pixabay.com/photo/2022/03/22/13/11/oplampe-7084997_1280.jpg" alt="Advanced Andrology & Laparoscopy OT" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Infrastructure</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Advanced Andrology & Laparoscopy OT</h3>
+                    </div>
+                </div>
+
+                <!-- 7. Genetics Lab -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(6)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reproductive Genetics & PGT Testing" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Embryology</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Reproductive Genetics & PGT Testing</h3>
+                    </div>
+                </div>
+
+                <!-- 8. Semen Analysis Room -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(7)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586454087712-669349b04fba?q=80&w=800&auto=format&fit=crop" alt="Andrology & Microfluidics Lab" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Embryology</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Andrology & Microfluidics Lab</h3>
+                    </div>
+                </div>
+
+                <!-- 9. Ultrasound Suite -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="infrastructure" onclick="openLightbox(8)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="High-Resolution Sonography Suite" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Infrastructure</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">High-Resolution Sonography Suite</h3>
+                    </div>
+                </div>
+
+                <!-- 10. Cryo Storage Bank -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(9)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://cdn.pixabay.com/photo/2021/08/20/14/51/medical-6560640_1280.jpg" alt="Cryopreservation & Gamete Bank" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Embryology</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Cryopreservation & Gamete Bank</h3>
+                    </div>
+                </div>
+
+                <!-- 11. Joy of Parenthood -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="moments" onclick="openLightbox(10)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Joy of Parenthood Celebrations" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Celebrations</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Joy of Parenthood Celebrations</h3>
+                    </div>
+                </div>
+
+                <!-- 12. Mother & Baby Meetup -->
+                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="moments" onclick="openLightbox(11)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://cdn.pixabay.com/photo/2021/07/13/15/00/pregnant-6463750_1280.jpg" alt="Mother & Baby Milestone Gathering" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
+                            <i class="ph ph-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Celebrations</span>
+                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Mother & Baby Milestone Gathering</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         LIGHTBOX MODAL
+         ========================================== -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <button class="absolute top-6 right-6 text-white text-3xl hover:text-brand-gold transition z-50 p-2" onclick="closeLightbox()">
+            <i class="ph ph-x"></i>
+        </button>
+        
+        <button class="absolute left-4 md:left-8 text-white text-4xl hover:text-brand-gold transition z-50 p-3 bg-black/40 rounded-full" onclick="prevImage()">
+            <i class="ph ph-caret-left"></i>
+        </button>
+        
+        <button class="absolute right-4 md:right-8 text-white text-4xl hover:text-brand-gold transition z-50 p-3 bg-black/40 rounded-full" onclick="nextImage()">
+            <i class="ph ph-caret-right"></i>
+        </button>
+
+        <div class="max-w-4xl max-h-[85vh] text-center flex flex-col items-center">
+            <img id="lightboxImg" src="" alt="" class="max-h-[72vh] max-w-full rounded-xl shadow-2xl object-contain">
+            <h3 id="lightboxCaption" class="text-white text-lg font-heading mt-4 font-normal"></h3>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         CLINIC TOUR CTA BANNER
+         ========================================== -->
+    <section class="py-16 bg-brand-dark text-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Experience Our Center in Person</h2>
+            <p class="text-blue-100 text-base md:text-lg mb-8 max-w-2xl mx-auto font-light">
+                Book a confidential appointment or visit our facility on Tonk Road, Jaipur to consult with our medical director.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://kindlewombivfgroup.com/book-online" class="inline-block bg-brand-gold text-brand-dark font-bold py-3.5 px-8 rounded-full shadow-lg hover:bg-white transition transform hover:-translate-y-0.5">
+                    Book an In-Person Consultation
+                </a>
+                <a href="tel:+919119107725" class="inline-block border-2 border-white text-white font-bold py-3.5 px-8 rounded-full hover:bg-white hover:text-brand-dark transition">
+                    Call +91 9119107725
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER SECTION
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Column 1: Logo & Mission -->
+            <div class="footer-col col-brand">
+                <div class="footer-logo-box">
+                    <img src="kindle-logo.png" alt="Kindle Womb Logo" class="footer-logo-img">
+                </div>
+                <p class="mission-text">
+                    Our mission is to provide the highest standard of fertility care with compassion, science, and a deep commitment to your family building journey.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="ivf-center.html">Our Center</a></li>
+                    <li><a href="gallery.html">Media & Gallery</a></li>
+                    <li><a href="https://kindlewombivfgroup.com/frequently-asked-questions">FAQs</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="all-locations.html">All IVF Locations</a></li>
+                    <li class="margin-top-links"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Our Services -->
+            <div class="footer-col">
+                <h3 class="footer-heading">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="ivf.html">In Vitro Fertilization (IVF)</a></li>
+                    <li><a href="iui.html">Intrauterine Insemination (IUI)</a></li>
+                    <li><a href="icsi.html">ICSI</a></li>
+                    <li><a href="donor-ivf-services.html">Donor IVF Services</a></li>
+                    <li><a href="infertility-assessment.html">Infertility Assessment</a></li>
+                    <li><a href="sperm-retrieval.html">Sperm Retrieval</a></li>
+                    <li class="margin-top-links"><a href="https://kindlewombivfgroup.com/fertility-enhancing-surgeries">Fertility Enhancing Surgeries</a></li>
+                    <li><a href="advance-technology.html">Advance Technology</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Us & Socials -->
+            <div class="footer-col col-contact">
+                <h3 class="footer-heading">Contact Us</h3>
+                <p class="contact-desc">
+                    2nd Floor, House of Doctors, Plot No.4, Lal Niwas, Hira Bagh, Tonk Road, Near SMS Hospital, Jaipur, Rajasthan, India
+                </p>
+                
+                <div class="contact-phones">
+                    <a href="tel:+919119107725">+91 9119107725</a>
+                    <a href="tel:+919119112755">+91 9119112755</a>
+                </div>
+
+                <div class="contact-email">
+                    <a href="mailto:info@kindlewomb.com">info@kindlewomb.com</a>
+                </div>
+
+                <!-- Social Media Icons Row -->
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/kindlewombivfgroup5" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/KindleWomb/61584375307032/" target="_blank" class="social-icon facebook" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Kindlewombivfgroup5" target="_blank" class="social-icon youtube" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Find an IVF Centre Near You Block (Global) -->
+        <div class="global-location-nav">
+            <div class="container">
+                <h3>Find an IVF Centre Near You</h3>
+                <h4>Our Locations in Rajasthan</h4>
+                <div class="location-links-inline">
+                    <a href="location-pages/best-ivf-center-jaipur.html">Jaipur</a> | 
+                    <a href="location-pages/best-ivf-center-jodhpur.html">Jodhpur</a> | 
+                    <a href="location-pages/best-ivf-center-udaipur.html">Udaipur</a> | 
+                    <a href="location-pages/best-ivf-center-kota.html">Kota</a> | 
+                    <a href="location-pages/best-ivf-center-ajmer.html">Ajmer</a> | 
+                    <a href="location-pages/best-ivf-center-bikaner.html">Bikaner</a> | 
+                    <a href="location-pages/best-ivf-center-alwar.html">Alwar</a> | 
+                    <a href="location-pages/best-ivf-center-bharatpur.html">Bharatpur</a> | 
+                    <a href="location-pages/best-ivf-center-sikar.html">Sikar</a> | 
+                    <a href="location-pages/best-ivf-center-bhilwara.html">Bhilwara</a> | 
+                    <a href="location-pages/best-ivf-center-pali.html">Pali</a> | 
+                    <a href="location-pages/best-ivf-center-sri-ganganagar.html">Sri Ganganagar</a> | 
+                    <a href="location-pages/best-ivf-center-hanumangarh.html">Hanumangarh</a> | 
+                    <a href="location-pages/best-ivf-center-barmer.html">Barmer</a> | 
+                    <a href="location-pages/best-ivf-center-chittorgarh.html">Chittorgarh</a> | 
+                    <a href="location-pages/best-ivf-center-nagaur.html">Nagaur</a> | 
+                    <a href="location-pages/best-ivf-center-jhunjhunu.html">Jhunjhunu</a> | 
+                    <a href="location-pages/best-ivf-center-tonk.html">Tonk</a> | 
+                    <a href="location-pages/best-ivf-center-sawai-madhopur.html">Sawai Madhopur</a> | 
+                    <a href="location-pages/best-ivf-center-jaisalmer.html">Jaisalmer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Bottom Bar -->
+        <div class="footer-bottom">
+            <p>&copy;2026 | Kindle Womb IVF Fertility Center. Designed & Developed by <a href="https://amazingit.in/" target="_blank" style="color: var(--bg-pure-white); text-decoration: underline;">Amazing IT</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Gallery & Lightbox Scripts -->
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const icon = document.querySelector('.menu-icon');
+            navMenu.classList.toggle('active');
+            
+            if(navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // Gallery data
+        const galleryData = [
+            { src: 'https://static.wixstatic.com/media/82aeb0_19ff5cf6b8f343a493a38a74e0d99dc0~mv2.jpg', caption: 'Welcoming Patient Reception Area' },
+            { src: 'https://static.wixstatic.com/media/82aeb0_a50ea262c5eb445bbdfb4f3b764d2bc3~mv2.jpg', caption: 'Comfortable Patient Lounges' },
+            { src: 'https://static.wixstatic.com/media/82aeb0_d2a333065a6845cb97d8b5fc2411e74a~mv2.jpg', caption: 'Private Doctor Consultation Chambers' },
+            { src: 'https://static.wixstatic.com/media/82aeb0_6a1f6e62ea2e4f19896c988f567a85bf~mv2.jpg', caption: 'Modular Level-3 Embryology Cleanroom' },
+            { src: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', caption: 'Micromanipulation & Laser Workstation' },
+            { src: 'https://cdn.pixabay.com/photo/2022/03/22/13/11/oplampe-7084997_1280.jpg', caption: 'Advanced Andrology & Laparoscopy OT' },
+            { src: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', caption: 'Reproductive Genetics & PGT Testing' },
+            { src: 'https://images.unsplash.com/photo-1586454087712-669349b04fba?q=80&w=800&auto=format&fit=crop', caption: 'Andrology & Microfluidics Lab' },
+            { src: 'https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', caption: 'High-Resolution Sonography Suite' },
+            { src: 'https://cdn.pixabay.com/photo/2021/08/20/14/51/medical-6560640_1280.jpg', caption: 'Cryopreservation & Gamete Bank' },
+            { src: 'https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', caption: 'Joy of Parenthood Celebrations' },
+            { src: 'https://cdn.pixabay.com/photo/2021/07/13/15/00/pregnant-6463750_1280.jpg', caption: 'Mother & Baby Milestone Gathering' }
+        ];
+
+        let currentLightboxIndex = 0;
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            const cap = document.getElementById('lightboxCaption');
+            
+            img.src = galleryData[index].src;
+            cap.textContent = galleryData[index].caption;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextImage() {
+            currentLightboxIndex = (currentLightboxIndex + 1) % galleryData.length;
+            openLightbox(currentLightboxIndex);
+        }
+
+        function prevImage() {
+            currentLightboxIndex = (currentLightboxIndex - 1 + galleryData.length) % galleryData.length;
+            openLightbox(currentLightboxIndex);
+        }
+
+        // Filtering
+        function filterGallery(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const modal = document.getElementById('lightboxModal');
+            if (modal.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+            }
+        });
+    </script>
+</body>
+</html>

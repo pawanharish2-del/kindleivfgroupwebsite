@@ -1,0 +1,75 @@
+# ==============================================================================
+# Kindle Womb IVF & Fertility Centre - Apache Configuration
+# Canonical Production Domain: https://kindlewombivfgroup.com/
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Permanent 301 Redirect for Old / Staging Domains (kindlewombivfgroup5.com)
+    RewriteCond %{HTTP_HOST} ^(?:www\.|blog\.)?kindlewombivfgroup5\.com$ [NC]
+    RewriteRule ^(.*)$ https://kindlewombivfgroup.com/$1 [R=301,L]
+
+    # 2. Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # 3. Canonical Domain (Enforce non-www on production domain)
+    RewriteCond %{HTTP_HOST} ^www\.kindlewombivfgroup\.com$ [NC]
+    RewriteRule ^(.*)$ https://kindlewombivfgroup.com/$1 [R=301,L]
+
+    # 4. Clean URLs: Serve .html pages without extension
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Rewrite /about to /about.html if it exists
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+    RewriteRule ^([^/]+)/?$ $1.html [L]
+
+    # Rewrite location-pages/some-page to location-pages/some-page.html if it exists
+    RewriteCond %{DOCUMENT_ROOT}/location-pages/$1.html -f
+    RewriteRule ^location-pages/([^/]+)/?$ location-pages/$1.html [L]
+
+    # Rewrite posts/some-post to posts/some-post.html if it exists
+    RewriteCond %{DOCUMENT_ROOT}/posts/$1.html -f
+    RewriteRule ^posts/([^/]+)/?$ posts/$1.html [L]
+</IfModule>
+
+# 5. Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# 6. Gzip Compression for Core Web Vitals & Fast Loading
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# 7. Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    
+    # Images & Media
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    
+    # Stylesheets and Javascripts
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    
+    # HTML Files (short cache for quick updates)
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# 8. Security Headers
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

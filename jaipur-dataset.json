@@ -1,0 +1,13 @@
+{
+  "LOCATION": "Jaipur",
+  "STATE": "Rajasthan",
+  "CITY_TYPE": "Major City",
+  "NEARBY_LOCATIONS": ["Mansarovar", "Vaishali Nagar", "Malviya Nagar", "Tonk Road", "Sanganer"],
+  "AIRPORT": "Jaipur International Airport (JAI)",
+  "RAILWAY_STATION": "Jaipur Junction Railway Station",
+  "BUS_STAND": "Sindhi Camp Bus Stand",
+  "LANDMARKS": ["Hawa Mahal", "Albert Hall Museum", "SMS Hospital", "Statue Circle", "Jal Mahal"],
+  "HOTELS": ["Rambagh Palace", "ITC Rajputana", "Radisson Blu Jaipur", "Hotel Clarks Amer", "The Lalit Jaipur"],
+  "DIAGNOSTIC_CENTRES": ["Dr. B Lal Clinical Laboratory", "SRL Diagnostics Jaipur", "Mahatma Gandhi Hospital Labs"],
+  "PHARMACIES": ["Apollo Pharmacy Jaipur", "Netmeds Pharmacy", "Local Medical Stores near SMS Hospital"]
+}

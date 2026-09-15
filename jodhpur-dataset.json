@@ -1,0 +1,13 @@
+{
+  "LOCATION": "Jodhpur",
+  "STATE": "Rajasthan",
+  "CITY_TYPE": "Major City",
+  "NEARBY_LOCATIONS": ["Sardarpura", "Ratanada", "Shastri Nagar", "Chopasni Housing Board", "Mahamandir"],
+  "AIRPORT": "Jodhpur Airport (JDH)",
+  "RAILWAY_STATION": "Jodhpur Junction Railway Station",
+  "BUS_STAND": "Paota Bus Stand",
+  "LANDMARKS": ["Mehrangarh Fort", "Umaid Bhawan Palace", "AIIMS Jodhpur", "MDM Hospital"],
+  "HOTELS": ["Taj Hari Mahal", "Radisson Jodhpur", "Indana Palace"],
+  "DIAGNOSTIC_CENTRES": ["Goyal Hospital Diagnostics", "Dr. Lal PathLabs Jodhpur", "MDM Hospital Labs"],
+  "PHARMACIES": ["Apollo Pharmacy Jodhpur", "MedPlus Sardarpura"]
+}

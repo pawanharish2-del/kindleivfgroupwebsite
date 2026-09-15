@@ -1,0 +1,27 @@
+# ==============================================================================
+# Kindle Womb IVF & Fertility Centre - Robots.txt
+# Canonical Production Domain: https://kindlewombivfgroup.com/
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /location-pages/
+Allow: /posts/
+Allow: /images/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.avif$
+Allow: /*.svg$
+
+# Disallow private scripts and templates
+Disallow: /*_runner.js$
+Disallow: /*_audit.js$
+Disallow: /*_engine.js$
+Disallow: /*.json$
+
+# Canonical XML Sitemap
+Sitemap: https://kindlewombivfgroup.com/sitemap.xml

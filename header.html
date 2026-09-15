@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindle Womb Responsive Header</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-container">
+        
+        <!-- Logo Section using image reference -->
+        <a href="https://kindlewombivfgroup.com" class="logo-area">
+            <img src="kindle-logo.png" alt="Kindle Womb IVF & Fertility Centre Logo" class="logo-img">
+        </a>
+
+        <!-- Hamburger Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars menu-icon"></i>
+        </button>
+
+        <!-- Navigation Section -->
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="https://kindlewombivfgroup.com" class="nav-item active">Home</a></li>
+                <li><a href="https://kindlewombivfgroup.com/about" class="nav-item">About</a></li>
+                
+                <!-- Services Dropdown Matrix -->
+                <li class="dropdown">
+                    <a href="https://kindlewombivfgroup.com/services" class="nav-item">Services <i class="fa-solid fa-arrow-down-long arrow-icon"></i></a>
+                    <div class="dropdown-content grid-dropdown">
+                        <div class="dropdown-grid">
+                            <a href="https://kindlewombivfgroup.com/ivf">IVF <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="https://kindlewombivfgroup.com/donor-ivf-services">Donor IVF Services <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="infertility-assessment.html">Infertility Assessment <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="https://kindlewombivfgroup.com/iui">IUI <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="https://kindlewombivfgroup.com/fertility-enhancing-surgeries">Fertility Enhancing Surgeries <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="advance-technology.html">Advance Technology <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="https://kindlewombivfgroup.com/icsi">ICSI <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="sperm-retrieval.html">Sperm Retrieval <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="https://kindlewombivfgroup.com/book-online">Book a Consultation <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="ivf-center.html" class="nav-item">IVF Center</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+                <li><a href="gallery.html" class="nav-item">Gallery</a></li>
+                
+                <!-- Patient Zone Dropdown Flex -->
+                <li class="dropdown">
+                    <a href="#" class="nav-item">Patient Zone <i class="fa-solid fa-arrow-down-long arrow-icon"></i></a>
+                    <div class="dropdown-content flex-dropdown">
+                        <div class="dropdown-flex-container">
+                             <a href="https://kindlewombivfgroup.com/what-is-surrogacy">What is surrogacy. <i class="fa-solid fa-circle-arrow-right"></i></a>
+                             <a href="https://kindlewombivfgroup.com/what-is-infertility">What is Infertility? <i class="fa-solid fa-circle-arrow-right"></i></a>
+                             <a href="https://kindlewombivfgroup.com/frequently-asked-questions">Frequently Asked Questions <i class="fa-solid fa-circle-arrow-right"></i></a>
+                             <a href="https://kindlewombivfgroup.com/">Blogs <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="cta-area">
+            <a href="tel:+91-9119112755" class="cta-button">Call Now <i class="fa-solid fa-phone phone-icon"></i></a>
+        </div>
+
+    </div>
+</header>
+
+<script>
+    function toggleMobileMenu() {
+        const navMenu = document.getElementById('navMenu');
+        const icon = document.querySelector('.menu-icon');
+        navMenu.classList.toggle('active');
+        
+        if(navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+        } else {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
+    }
+</script>
+
+</body>
+</html>
