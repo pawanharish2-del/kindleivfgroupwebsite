@@ -39,32 +39,34 @@ allHtml.forEach(file => {
   // Skip if noindex is present
   if (/name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(content)) return;
 
+  const cleanSlug = norm.replace(/\.html$/, '');
+
   let url;
   let priority = '0.7';
   let changefreq = 'weekly';
 
-  if (norm === 'index.html') {
+  if (cleanSlug === 'index') {
     url = `${DOMAIN}/`;
     priority = '1.0';
     changefreq = 'daily';
-  } else if (norm === 'about.html' || norm === 'ivf.html' || norm === 'contact.html' || norm === 'ivf-center.html') {
-    url = `${DOMAIN}/${norm}`;
+  } else if (cleanSlug === 'about' || cleanSlug === 'ivf' || cleanSlug === 'contact' || cleanSlug === 'ivf-center') {
+    url = `${DOMAIN}/${cleanSlug}`;
     priority = '0.9';
     changefreq = 'weekly';
-  } else if (norm === 'iui.html' || norm === 'icsi.html' || norm === 'donor-ivf-services.html' || norm === 'sperm-retrieval.html' || norm === 'infertility-assessment.html' || norm === 'advance-technology.html' || norm === 'gallery.html' || norm === 'frequently-asked-questions.html' || norm === 'what-is-surrogacy.html' || norm === 'blogs.html' || norm === 'all-locations.html') {
-    url = `${DOMAIN}/${norm}`;
+  } else if (cleanSlug === 'iui' || cleanSlug === 'icsi' || cleanSlug === 'donor-ivf-services' || cleanSlug === 'sperm-retrieval' || cleanSlug === 'infertility-assessment' || cleanSlug === 'advance-technology' || cleanSlug === 'gallery' || cleanSlug === 'frequently-asked-questions' || cleanSlug === 'what-is-surrogacy' || cleanSlug === 'blogs' || cleanSlug === 'all-locations') {
+    url = `${DOMAIN}/${cleanSlug}`;
     priority = '0.8';
     changefreq = 'weekly';
-  } else if (norm.startsWith('posts/')) {
-    url = `${DOMAIN}/${norm}`;
+  } else if (cleanSlug.startsWith('posts/')) {
+    url = `${DOMAIN}/${cleanSlug}`;
     priority = '0.7';
     changefreq = 'monthly';
-  } else if (norm.startsWith('location-pages/')) {
-    url = `${DOMAIN}/${norm}`;
+  } else if (cleanSlug.startsWith('location-pages/')) {
+    url = `${DOMAIN}/${cleanSlug}`;
     priority = '0.75';
     changefreq = 'weekly';
   } else {
-    url = `${DOMAIN}/${norm}`;
+    url = `${DOMAIN}/${cleanSlug}`;
     priority = '0.6';
     changefreq = 'monthly';
   }
@@ -104,4 +106,4 @@ entries.forEach(item => {
 xml += `</urlset>\n`;
 
 fs.writeFileSync('sitemap.xml', xml, 'utf8');
-console.log(`Successfully generated sitemap.xml with ${entries.length} canonical URLs.`);
+console.log(`Successfully generated sitemap.xml with ${entries.length} clean (extensionless) canonical URLs.`);

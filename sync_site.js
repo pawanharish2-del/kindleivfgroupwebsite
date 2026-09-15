@@ -37,7 +37,7 @@ let trueFooter = footerMatch ? footerMatch[0] : '';
 if (!trueFooter.includes('All IVF Locations')) {
     trueFooter = trueFooter.replace(
         /(<li><a href="https:\/\/blog\.kindlewombivfgroup5\.com\/">Blog<\/a><\/li>)/,
-        '$1\n                <li><a href="https://kindlewombivfgroup.com/all-locations.html">All IVF Locations</a></li>'
+        '$1\n                <li><a href="https://kindlewombivfgroup.com/all-locations">All IVF Locations</a></li>'
     );
 }
 

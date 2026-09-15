@@ -137,7 +137,7 @@ const html = `<!DOCTYPE html>
     <title>All IVF Locations in Rajasthan | Kindle Womb IVF</title>
     
     <meta name="description" content="Directory of all 138 Kindle Womb IVF & Fertility Centre locations across Rajasthan, providing world-class fertility care near you.">
-    <link rel="canonical" href="https://kindlewombivfgroup.com/all-locations.html">
+    <link rel="canonical" href="https://kindlewombivfgroup.com/all-locations">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

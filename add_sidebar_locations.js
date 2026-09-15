@@ -13,7 +13,7 @@ locations.forEach(city => {
 });
 
 // Adding a 'View All' link that stands out
-linksHtml += `                <a href="all-locations.html" style="font-size: 13.5px; padding: 6px 14px; background: var(--navy-blue); border: 1px solid var(--navy-blue); border-radius: 20px; color: #fff; text-decoration: none; transition: all 0.3s ease; display: inline-block; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-weight: 500;" onmouseover="this.style.background='var(--brand-rust)'; this.style.borderColor='var(--brand-rust)'; this.style.transform='translateY(-1px)';" onmouseout="this.style.background='var(--navy-blue)'; this.style.borderColor='var(--navy-blue)'; this.style.transform='translateY(0)';">Explore All Locations <i class="fa-solid fa-arrow-right-long" style="margin-left: 5px;"></i></a>\n`;
+linksHtml += `                <a href="all-locations" style="font-size: 13.5px; padding: 6px 14px; background: var(--navy-blue); border: 1px solid var(--navy-blue); border-radius: 20px; color: #fff; text-decoration: none; transition: all 0.3s ease; display: inline-block; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-weight: 500;" onmouseover="this.style.background='var(--brand-rust)'; this.style.borderColor='var(--brand-rust)'; this.style.transform='translateY(-1px)';" onmouseout="this.style.background='var(--navy-blue)'; this.style.borderColor='var(--navy-blue)'; this.style.transform='translateY(0)';">Explore All Locations <i class="fa-solid fa-arrow-right-long" style="margin-left: 5px;"></i></a>\n`;
 
 const widgetHtml = `
         <div class="sidebar-widget locations-widget" style="margin-top: 40px; padding: 25px; background: #fafafa; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05);">

@@ -159,7 +159,7 @@ function generateHTML(keyword, location) {
                 <div class="hero-content">
                     <h1>${keyword} in ${location}: Your Journey to Parenthood Starts Here</h1>
                     <p>Experience compassionate care, advanced medical technology, and personalized fertility treatments at Kindle Womb, proudly serving families across ${location} and Rajasthan.</p>
-                    <a href="../contact.html" class="btn-primary">Book a Consultation</a>
+                    <a href="../contact" class="btn-primary">Book a Consultation</a>
                 </div>
                 <div class="hero-image">
                     <img src="../images/${imageFilename}" alt="Happy mother with newborn baby in ${location}" width="800" height="600" loading="lazy">
@@ -200,7 +200,7 @@ function generateHTML(keyword, location) {
                     <li><i class="fa-solid fa-check text-pink-gradient"></i> <a href="best-fertility-center-${locationSlug}.html">Best Fertility Center in ${location}</a></li>
                     <li><i class="fa-solid fa-check text-pink-gradient"></i> <a href="top-ivf-clinic-${locationSlug}.html">Top IVF Clinic in ${location}</a></li>
                     <li><i class="fa-solid fa-check text-pink-gradient"></i> <a href="best-ivf-doctor-${locationSlug}.html">Best IVF Doctor in ${location}</a></li>
-                    <li><i class="fa-solid fa-check text-pink-gradient"></i> <a href="../contact.html">Contact Us</a></li>
+                    <li><i class="fa-solid fa-check text-pink-gradient"></i> <a href="../contact">Contact Us</a></li>
                 </ul>
             </div>
         </section>

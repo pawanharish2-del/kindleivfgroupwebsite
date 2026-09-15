@@ -8,11 +8,11 @@ const testTubeHtml = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leading Test Tube Baby Center in Jaipur | Kindle Womb IVF</title>
     <meta name="description" content="Searching for a trusted test tube baby center in Jaipur? Discover how our advanced clinical techniques and compassionate care can help you conceive safely.">
-    <link rel="canonical" href="https://kindlewombivfgroup.com/test-tube-baby-center-jaipur.html">
+    <link rel="canonical" href="https://kindlewombivfgroup.com/test-tube-baby-center-jaipur">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://kindlewombivfgroup.com/test-tube-baby-center-jaipur.html">
+    <meta property="og:url" content="https://kindlewombivfgroup.com/test-tube-baby-center-jaipur">
     <meta property="og:title" content="Leading Test Tube Baby Center in Jaipur">
     <meta property="og:description" content="Discover how our advanced clinical techniques and compassionate care can help you conceive safely.">
     <meta property="og:image" content="https://kindlewombivfgroup.com/images/hero-test-tube-baby-jaipur.jpg">
@@ -171,11 +171,11 @@ const doctorHtml = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consult the Best IVF Doctor in Jaipur | Expert Fertility Specialists</title>
     <meta name="description" content="Meet highly qualified and compassionate IVF doctors in Jaipur. Our infertility specialists provide evidence-based treatments to help you conceive.">
-    <link rel="canonical" href="https://kindlewombivfgroup.com/best-ivf-doctor-jaipur.html">
+    <link rel="canonical" href="https://kindlewombivfgroup.com/best-ivf-doctor-jaipur">
     
     <!-- Open Graph -->
     <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://kindlewombivfgroup.com/best-ivf-doctor-jaipur.html">
+    <meta property="og:url" content="https://kindlewombivfgroup.com/best-ivf-doctor-jaipur">
     <meta property="og:title" content="Best IVF Doctor in Jaipur">
     <meta property="og:description" content="Connect with renowned infertility experts providing ethical, high-success reproductive medicine in Rajasthan.">
     <meta property="og:image" content="https://kindlewombivfgroup.com/images/hero-best-ivf-doctor.jpg">

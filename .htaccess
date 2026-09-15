@@ -1,6 +1,7 @@
 # ==============================================================================
 # Kindle Womb IVF & Fertility Centre - Apache Configuration
 # Canonical Production Domain: https://kindlewombivfgroup.com/
+# Clean Extensionless URLs (No .html in browser)
 # ==============================================================================
 
 <IfModule mod_rewrite.c>
@@ -19,7 +20,12 @@
     RewriteCond %{HTTP_HOST} ^www\.kindlewombivfgroup\.com$ [NC]
     RewriteRule ^(.*)$ https://kindlewombivfgroup.com/$1 [R=301,L]
 
-    # 4. Clean URLs: Serve .html pages without extension
+    # 4. Strip .html extension with 301 Permanent Redirect
+    # If the user directly accesses /page.html, 301 redirect to /page
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+
+    # 5. Clean URLs: Internally route clean requests to corresponding .html files
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
 
@@ -27,24 +33,24 @@
     RewriteCond %{DOCUMENT_ROOT}/$1.html -f
     RewriteRule ^([^/]+)/?$ $1.html [L]
 
-    # Rewrite location-pages/some-page to location-pages/some-page.html if it exists
+    # Rewrite /location-pages/some-page to /location-pages/some-page.html if it exists
     RewriteCond %{DOCUMENT_ROOT}/location-pages/$1.html -f
     RewriteRule ^location-pages/([^/]+)/?$ location-pages/$1.html [L]
 
-    # Rewrite posts/some-post to posts/some-post.html if it exists
+    # Rewrite /posts/some-post to /posts/some-post.html if it exists
     RewriteCond %{DOCUMENT_ROOT}/posts/$1.html -f
     RewriteRule ^posts/([^/]+)/?$ posts/$1.html [L]
 </IfModule>
 
-# 5. Custom 404 Error Page
+# 6. Custom 404 Error Page
 ErrorDocument 404 /404.html
 
-# 6. Gzip Compression for Core Web Vitals & Fast Loading
+# 7. Gzip Compression for Core Web Vitals & Fast Loading
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-# 7. Browser Caching
+# 8. Browser Caching
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresDefault "access plus 1 month"
@@ -66,7 +72,7 @@ ErrorDocument 404 /404.html
     ExpiresByType text/html "access plus 1 hour"
 </IfModule>
 
-# 8. Security Headers
+# 9. Security Headers
 <IfModule mod_headers.c>
     Header set X-XSS-Protection "1; mode=block"
     Header set X-Frame-Options "SAMEORIGIN"
