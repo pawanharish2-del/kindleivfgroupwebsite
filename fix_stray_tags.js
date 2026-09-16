@@ -32,7 +32,7 @@ files.forEach(file => {
   // Also clean twitter tags in gallery.html
   if (file.includes('gallery')) {
     content = content.replaceAll('https://kindlewombivfgroup.com/gallery.html', 'https://kindlewombivfgroup.com/gallery');
-    content = content.replaceAll('https://static.wixstatic.com/media/82aeb0_19ff5cf6b8f343a493a38a74e0d99dc0~mv2.jpg', 'https://kindlewombivfgroup.com/images/best-ivf-center-jaipur.jpg');
+    content = content.replaceAll('/images/gallery/gallery2 (3).avif', 'https://kindlewombivfgroup.com/images/best-ivf-center-jaipur.jpg');
   }
 
   if (content !== original) {
