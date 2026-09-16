@@ -287,22 +287,25 @@
             gap: 2px;
         }
 
-        /* Hero Image Container */
+        /* Hero Image Container (Vertical Portrait Banner) */
         .hero-image-wrap {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
         }
 
         .hero-img-arch {
             width: 100%;
-            max-width: 520px;
+            max-width: 440px;
             height: auto;
-            border-radius: 260px 260px 40px 40px;
+            aspect-ratio: 992 / 1585;
+            border-radius: 28px;
             box-shadow: 0 20px 50px rgba(90, 115, 156, 0.18);
             border: 6px solid #FFFFFF;
             object-fit: cover;
+            object-position: center;
             display: block;
         }
 
@@ -310,9 +313,17 @@
             .hero-grid {
                 grid-template-columns: 1.15fr 0.85fr;
                 gap: 50px;
+                align-items: center;
             }
             .hero-section {
                 padding: 70px 0 80px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-img-arch {
+                max-width: 340px;
+                margin: 0 auto;
             }
         }
 
