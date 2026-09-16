@@ -295,344 +295,150 @@
     </section>
 
     <!-- ==========================================
-         GALLERY FILTER & GRID SECTION
+         GALLERY PHOTO GRID SECTION
          ========================================== -->
-    <section class="py-14 md:py-20 bg-white">
+    <section class="py-12 md:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Category Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button class="filter-btn active" onclick="filterGallery('all', this)">All Photos</button>
-                <button class="filter-btn" onclick="filterGallery('cleanrooms', this)">Embryology & Labs</button>
-                <button class="filter-btn" onclick="filterGallery('infrastructure', this)">Clinic Infrastructure</button>
-                <button class="filter-btn" onclick="filterGallery('consultation', this)">Consultation Suites</button>
-                <button class="filter-btn" onclick="filterGallery('moments', this)">Patient Joy & Events</button>
-            </div>
-
-            <!-- Gallery Grid (12 Items) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryContainer">
-                <!-- 1. Modern Clinical Infrastructure -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="infrastructure" onclick="openLightbox(0)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (1).avif" alt="Kindle Womb IVF Consultation & Clinical Infrastructure" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Infrastructure</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Modern Clinical Infrastructure</h3>
+            <!-- Simple Responsive Image Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="galleryContainer">
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(0)">
+                    <img src="/images/gallery/gallery2 (1).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 2. Embryology & Cleanroom Suite -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(1)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (2).avif" alt="Embryology & Advanced Reproductive Cleanroom" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Embryology Lab</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Embryology & Cleanroom Suite</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(1)">
+                    <img src="/images/gallery/gallery2 (2).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 3. Patient Consultation Chambers -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="consultation" onclick="openLightbox(2)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (3).avif" alt="Patient Consultation Chambers & Guidance" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wide">Consultation</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Patient Consultation Chambers</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(2)">
+                    <img src="/images/gallery/gallery2 (3).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 4. Advanced Diagnostic Facility -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(3)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (4).avif" alt="Diagnostic Ultrasound & Imaging Suite" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Diagnostics</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Advanced Diagnostic Facility</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(3)">
+                    <img src="/images/gallery/gallery2 (4).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 5. Reception & Patient Lounge -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="infrastructure" onclick="openLightbox(4)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (5).avif" alt="Kindle Womb Reception & Patient Care Wing" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Infrastructure</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Reception & Patient Lounge</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(4)">
+                    <img src="/images/gallery/gallery2 (5).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 6. Andrology & Gamete Laboratory -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(5)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (6).avif" alt="Specialized Andrology & Gamete Handling Facility" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Embryology</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Andrology & Gamete Laboratory</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(5)">
+                    <img src="/images/gallery/gallery2 (6).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 7. Patient Care & Recovery Suite -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="consultation" onclick="openLightbox(6)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (7).avif" alt="Private Patient Recovery & Care Suites" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wide">Care Suites</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Patient Care & Recovery Suite</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(6)">
+                    <img src="/images/gallery/gallery2 (7).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 8. Dedicated Clinical Team -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="moments" onclick="openLightbox(7)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (8).avif" alt="Kindle Womb IVF Team & Clinical Staff" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-goldDark uppercase tracking-wide">Our Team</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Dedicated Clinical Team</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(7)">
+                    <img src="/images/gallery/gallery2 (8).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 9. Modern Procedure Cleanroom -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(8)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (9).avif" alt="State-of-the-Art IVF Procedure Room" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Cleanrooms</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Modern Procedure Cleanroom</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(8)">
+                    <img src="/images/gallery/gallery2 (9).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 10. Cryopreservation Facility -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(9)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (10).avif" alt="Cryopreservation & Gamete Vitrification Bank" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Cryo Bank</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Cryopreservation Facility</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(9)">
+                    <img src="/images/gallery/gallery2 (10).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 11. Welcoming Care Center -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="infrastructure" onclick="openLightbox(10)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (11).avif" alt="Warm & Welcoming Patient Experience Area" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Infrastructure</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Welcoming Care Center</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(10)">
+                    <img src="/images/gallery/gallery2 (11).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 12. Specialist Consultation Wing -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="consultation" onclick="openLightbox(11)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (12).avif" alt="Specialist Fertility Consultation Room" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wide">Consultation</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Specialist Consultation Wing</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(11)">
+                    <img src="/images/gallery/gallery2 (12).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 13. Patient Counseling Lounge -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="consultation" onclick="openLightbox(12)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (13).avif" alt="Patient Counseling & Emotional Support Lounge" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wide">Patient Care</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Patient Counseling Lounge</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(12)">
+                    <img src="/images/gallery/gallery2 (13).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 14. Precision Micromanipulation Suite -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(13)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (14).avif" alt="Advanced ICSI & Micromanipulation Equipment" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Embryology</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Precision Micromanipulation Suite</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(13)">
+                    <img src="/images/gallery/gallery2 (14).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 15. Kindle Womb Facility Entrance -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="infrastructure" onclick="openLightbox(14)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (15).avif" alt="Kindle Womb Centre Exterior & Entrance Tonk Road" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Infrastructure</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Kindle Womb Facility Entrance</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(14)">
+                    <img src="/images/gallery/gallery2 (15).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 16. Comfortable Day Care Suites -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="consultation" onclick="openLightbox(15)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (16).avif" alt="Day Care & Post-Procedure Care Wing" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wide">Day Care</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Comfortable Day Care Suites</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(15)">
+                    <img src="/images/gallery/gallery2 (16).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 17. Health & Fertility Awareness Camps -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="moments" onclick="openLightbox(16)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (17).avif" alt="Kindle Womb Community & Awareness Events" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-goldDark uppercase tracking-wide">Events</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Health & Fertility Awareness Camps</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(16)">
+                    <img src="/images/gallery/gallery2 (17).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 18. Laparoscopic & IVF OT Suite -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(17)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (18).avif" alt="Modern IVF Operating & Laparoscopy Suite" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">OT Suite</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Laparoscopic & IVF OT Suite</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(17)">
+                    <img src="/images/gallery/gallery2 (18).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 19. Joyous Parenthood Milestones -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="moments" onclick="openLightbox(18)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (19).avif" alt="Patient Success & Parenthood Milestones" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-goldDark uppercase tracking-wide">Milestones</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Joyous Parenthood Milestones</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(18)">
+                    <img src="/images/gallery/gallery2 (19).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 20. Patient Support & Assistance -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="infrastructure" onclick="openLightbox(19)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (20).avif" alt="Clinical Pharmacy & Patient Assistance Desk" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Infrastructure</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Patient Support & Assistance</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(19)">
+                    <img src="/images/gallery/gallery2 (20).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 21. Time-Lapse Incubators & Monitoring -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="cleanrooms" onclick="openLightbox(20)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (21).avif" alt="Embryologist Monitoring & Time-Lapse Incubators" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wide">Embryology</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Time-Lapse Incubators & Monitoring</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(20)">
+                    <img src="/images/gallery/gallery2 (21).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 22. Celebrating Miracle Babies -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="moments" onclick="openLightbox(21)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery2 (22).avif" alt="Celebrating New Life & Happy Families" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-goldDark uppercase tracking-wide">Celebrations</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Celebrating Miracle Babies</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(21)">
+                    <img src="/images/gallery/gallery2 (22).avif" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
-                <!-- 23. Clinical Environment & Patient Care -->
-                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="infrastructure" onclick="openLightbox(22)">
-                    <div class="relative h-64 overflow-hidden bg-gray-50">
-                        <img src="/images/gallery/gallery-photo-4.jpg" alt="Kindle Womb IVF Clinic Facility" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
-                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">
-                            <i class="ph ph-magnifying-glass-plus"></i>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <span class="text-xs font-bold text-brand-red uppercase tracking-wide">Infrastructure</span>
-                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">Clinical Environment & Patient Care</h3>
+                <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 bg-gray-100 cursor-pointer aspect-[4/3] transition-all duration-300" onclick="openLightbox(22)">
+                    <img src="/images/gallery/gallery-photo-4.jpg" alt="Kindle Womb IVF Gallery Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-3xl">
+                        <i class="ph ph-magnifying-glass-plus"></i>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -641,119 +447,21 @@
          LIGHTBOX MODAL
          ========================================== -->
     <div id="lightboxModal" class="lightbox-modal">
-        <button class="absolute top-6 right-6 text-white text-3xl hover:text-brand-gold transition z-50 p-2" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-3xl hover:text-brand-gold transition z-50 p-2" onclick="closeLightbox()" aria-label="Close Lightbox">
             <i class="ph ph-x"></i>
         </button>
         
-        <button class="absolute left-4 md:left-8 text-white text-4xl hover:text-brand-gold transition z-50 p-3 bg-black/40 rounded-full" onclick="prevImage()">
+        <button class="absolute left-4 md:left-8 text-white text-4xl hover:text-brand-gold transition z-50 p-3 bg-black/40 rounded-full" onclick="prevImage()" aria-label="Previous Image">
             <i class="ph ph-caret-left"></i>
         </button>
         
-        <button class="absolute right-4 md:right-8 text-white text-4xl hover:text-brand-gold transition z-50 p-3 bg-black/40 rounded-full" onclick="nextImage()">
+        <button class="absolute right-4 md:right-8 text-white text-4xl hover:text-brand-gold transition z-50 p-3 bg-black/40 rounded-full" onclick="nextImage()" aria-label="Next Image">
             <i class="ph ph-caret-right"></i>
         </button>
 
-        <div class="max-w-4xl max-h-[85vh] text-center flex flex-col items-center">
-            <img id="lightboxImg" src="" alt="" class="max-h-[72vh] max-w-full rounded-xl shadow-2xl object-contain">
-            <h3 id="lightboxCaption" class="text-white text-lg font-heading mt-4 font-normal"></h3>
+        <div class="max-w-5xl max-h-[88vh] text-center flex flex-col items-center justify-center p-4">
+            <img id="lightboxImg" src="" alt="Kindle Womb IVF Clinic Photo" class="max-h-[82vh] max-w-full rounded-2xl shadow-2xl object-contain">
         </div>
-    </div>
-
-    <!-- ==========================================
-         CLINIC TOUR CTA BANNER
-         ========================================== -->
-    <section class="py-16 bg-brand-dark text-white text-center relative overflow-hidden">
-        <div class="max-w-4xl mx-auto px-4 relative z-10">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Experience Our Center in Person</h2>
-            <p class="text-blue-100 text-base md:text-lg mb-8 max-w-2xl mx-auto font-light">
-                Book a confidential appointment or visit our facility on Tonk Road, Jaipur to consult with our medical director.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://kindlewombivfgroup.com/contact" class="inline-block bg-brand-gold text-brand-dark font-bold py-3.5 px-8 rounded-full shadow-lg hover:bg-white transition transform hover:-translate-y-0.5">
-                    Book an In-Person Consultation
-                </a>
-                <a href="tel:+919119107725" class="inline-block border-2 border-white text-white font-bold py-3.5 px-8 rounded-full hover:bg-white hover:text-brand-dark transition">
-                    Call +91 9119107725
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-         FOOTER SECTION
-         ========================================== -->
-    <footer class="site-footer">
-    <div class="footer-container">
-        
-        <!-- Column 1: Logo & Mission -->
-        <div class="footer-col col-brand">
-            <div class="footer-logo-box">
-                <img src="/kindle-logo.png" alt="Kindle Womb Logo" class="footer-logo-img">
-            </div>
-            <p class="mission-text">
-                Our mission is to provide the highest standard of fertility care with compassion, science, and a deep commitment to your family building journey.
-            </p>
-        </div>
-
-        <!-- Column 2: Quick Links -->
-        <div class="footer-col">
-            <h3 class="footer-heading">Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/ivf-center">Our Center</a></li>
-                <li><a href="/gallery">Media & Gallery</a></li>
-                <li><a href="/frequently-asked-questions">FAQs</a></li>
-                <li><a href="/blogs">Blog</a></li>
-                <li><a href="/all-locations">All IVF Locations</a></li>
-                <li class="margin-top-links"><a href="/contact">Contact Us</a></li>
-            </ul>
-        </div>
-
-        <!-- Column 3: Our Services -->
-        <div class="footer-col">
-            <h3 class="footer-heading">Our Services</h3>
-            <ul class="footer-links">
-                <li><a href="/ivf">In Vitro Fertilization (IVF)</a></li>
-                <li><a href="/iui">Intrauterine Insemination (IUI)</a></li>
-                <li><a href="/icsi">ICSI</a></li>
-                <li><a href="/donor-ivf-services">Donor IVF Services</a></li>
-                <li><a href="/infertility-assessment">Infertility Assessment</a></li>
-                <li><a href="/sperm-retrieval">Sperm Retrieval</a></li>
-                <li class="margin-top-links"><a href="/fertility-enhancing-surgeries">Fertility Enhancing Surgeries</a></li>
-                <li><a href="/advance-technology">Advance Technology</a></li>
-            </ul>
-        </div>
-
-        <!-- Column 4: Contact Us & Socials -->
-        <div class="footer-col col-contact">
-            <h3 class="footer-heading">Contact Us</h3>
-            <p class="contact-desc">
-                2nd Floor, House of Doctors, Plot No.4, Lal Niwas, Hira Bagh, Tonk Road, Near SMS Hospital, Jaipur, Rajasthan, India
-            </p>
-            
-            <div class="contact-phones">
-                <a href="tel:+919119107725">+91 9119107725</a>
-                <a href="tel:+919119112755">+91 9119112755</a>
-            </div>
-
-            <div class="contact-email">
-                <a href="mailto:info@kindlewomb.com">info@kindlewomb.com</a>
-            </div>
-
-            <!-- Social Media Icons Row -->
-            <div class="footer-socials">
-                <a href="https://www.instagram.com/kindlewombivfgroup5" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/people/KindleWomb/61584375307032/" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="https://www.youtube.com/@Kindlewombivfgroup5" target="_blank" rel="noopener noreferrer" class="social-icon youtube" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-            </div>
-        </div>
-
     </div>
 
     <!-- Find an IVF Centre Near You Block (Global) -->
@@ -817,96 +525,73 @@
         // Gallery data
         const galleryData = [
     {
-        "src": "/images/gallery/gallery2 (1).avif",
-        "caption": "Modern Clinical Infrastructure - Kindle Womb IVF Consultation & Clinical Infrastructure"
+        "src": "/images/gallery/gallery2 (1).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (2).avif",
-        "caption": "Embryology & Cleanroom Suite - Embryology & Advanced Reproductive Cleanroom"
+        "src": "/images/gallery/gallery2 (2).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (3).avif",
-        "caption": "Patient Consultation Chambers - Patient Consultation Chambers & Guidance"
+        "src": "/images/gallery/gallery2 (3).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (4).avif",
-        "caption": "Advanced Diagnostic Facility - Diagnostic Ultrasound & Imaging Suite"
+        "src": "/images/gallery/gallery2 (4).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (5).avif",
-        "caption": "Reception & Patient Lounge - Kindle Womb Reception & Patient Care Wing"
+        "src": "/images/gallery/gallery2 (5).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (6).avif",
-        "caption": "Andrology & Gamete Laboratory - Specialized Andrology & Gamete Handling Facility"
+        "src": "/images/gallery/gallery2 (6).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (7).avif",
-        "caption": "Patient Care & Recovery Suite - Private Patient Recovery & Care Suites"
+        "src": "/images/gallery/gallery2 (7).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (8).avif",
-        "caption": "Dedicated Clinical Team - Kindle Womb IVF Team & Clinical Staff"
+        "src": "/images/gallery/gallery2 (8).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (9).avif",
-        "caption": "Modern Procedure Cleanroom - State-of-the-Art IVF Procedure Room"
+        "src": "/images/gallery/gallery2 (9).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (10).avif",
-        "caption": "Cryopreservation Facility - Cryopreservation & Gamete Vitrification Bank"
+        "src": "/images/gallery/gallery2 (10).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (11).avif",
-        "caption": "Welcoming Care Center - Warm & Welcoming Patient Experience Area"
+        "src": "/images/gallery/gallery2 (11).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (12).avif",
-        "caption": "Specialist Consultation Wing - Specialist Fertility Consultation Room"
+        "src": "/images/gallery/gallery2 (12).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (13).avif",
-        "caption": "Patient Counseling Lounge - Patient Counseling & Emotional Support Lounge"
+        "src": "/images/gallery/gallery2 (13).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (14).avif",
-        "caption": "Precision Micromanipulation Suite - Advanced ICSI & Micromanipulation Equipment"
+        "src": "/images/gallery/gallery2 (14).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (15).avif",
-        "caption": "Kindle Womb Facility Entrance - Kindle Womb Centre Exterior & Entrance Tonk Road"
+        "src": "/images/gallery/gallery2 (15).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (16).avif",
-        "caption": "Comfortable Day Care Suites - Day Care & Post-Procedure Care Wing"
+        "src": "/images/gallery/gallery2 (16).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (17).avif",
-        "caption": "Health & Fertility Awareness Camps - Kindle Womb Community & Awareness Events"
+        "src": "/images/gallery/gallery2 (17).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (18).avif",
-        "caption": "Laparoscopic & IVF OT Suite - Modern IVF Operating & Laparoscopy Suite"
+        "src": "/images/gallery/gallery2 (18).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (19).avif",
-        "caption": "Joyous Parenthood Milestones - Patient Success & Parenthood Milestones"
+        "src": "/images/gallery/gallery2 (19).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (20).avif",
-        "caption": "Patient Support & Assistance - Clinical Pharmacy & Patient Assistance Desk"
+        "src": "/images/gallery/gallery2 (20).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (21).avif",
-        "caption": "Time-Lapse Incubators & Monitoring - Embryologist Monitoring & Time-Lapse Incubators"
+        "src": "/images/gallery/gallery2 (21).avif"
     },
     {
-        "src": "/images/gallery/gallery2 (22).avif",
-        "caption": "Celebrating Miracle Babies - Celebrating New Life & Happy Families"
+        "src": "/images/gallery/gallery2 (22).avif"
     },
     {
-        "src": "/images/gallery/gallery-photo-4.jpg",
-        "caption": "Clinical Environment & Patient Care - Kindle Womb IVF Clinic Facility"
+        "src": "/images/gallery/gallery-photo-4.jpg"
     }
 ];
 
@@ -914,14 +599,11 @@
 
         function openLightbox(index) {
             currentLightboxIndex = index;
-            const modal = document.getElementById('lightboxModal');
-            const img = document.getElementById('lightboxImg');
-            const cap = document.getElementById('lightboxCaption');
-            
+            const modal = document.getElementById("lightboxModal");
+            const img = document.getElementById("lightboxImg");
             img.src = galleryData[index].src;
-            cap.textContent = galleryData[index].caption;
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
         }
 
         function closeLightbox() {
@@ -939,19 +621,7 @@
             openLightbox(currentLightboxIndex);
         }
 
-        // Filtering
-        function filterGallery(category, btn) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const items = document.querySelectorAll('.gallery-item');
-            items.forEach(item => {
-                if (category === 'all' || item.getAttribute('data-category') === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+        );
         }
 
         // Keyboard navigation
