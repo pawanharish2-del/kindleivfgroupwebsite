@@ -56,35 +56,151 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/global.css">
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data (AEO & GEO Graph Schema) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Kindle Womb IVF & Fertility Centre",
-      "image": "https://kindlewombivfgroup.com/kindle-logo.png",
-      "url": "https://kindlewombivfgroup.com/",
-      "telephone": "+919119107725",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, House of Doctors, Plot No.4, Lal Niwas, Hira Bagh, Tonk Road, Near SMS Hospital",
-        "addressLocality": "Jaipur",
-        "addressRegion": "Rajasthan",
-        "postalCode": "302015",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 26.8920,
-        "longitude": 75.8156
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "20:00"
-      }
+      "@graph": [
+        {
+          "@type": ["MedicalBusiness", "MedicalClinic"],
+          "@id": "https://kindlewombivfgroup.com/#organization",
+          "name": "Kindle Womb IVF & Fertility Centre",
+          "alternateName": "Kindle Womb Fertility Clinic",
+          "url": "https://kindlewombivfgroup.com/",
+          "logo": "https://kindlewombivfgroup.com/kindle-logo.png",
+          "image": "https://kindlewombivfgroup.com/images/best-ivf-center-jaipur.jpg",
+          "description": "Kindle Womb IVF & Fertility Centre is a premier reproductive hospital in Jaipur, Rajasthan offering world-class IVF, ICSI, IUI, Blastocyst culture, and fertility surgeries with high success rates.",
+          "telephone": "+919119107725",
+          "email": "info@kindlewomb.com",
+          "priceRange": "$$",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Net Banking, Zero-Cost EMI",
+          "medicalSpecialty": [
+            "https://schema.org/Obstetric",
+            "https://schema.org/Gynecologic"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2nd Floor, House of Doctors, Plot No.4, Lal Niwas, Hira Bagh, Tonk Road, Near SMS Hospital",
+            "addressLocality": "Jaipur",
+            "addressRegion": "Rajasthan",
+            "postalCode": "302015",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 26.8920,
+            "longitude": 75.8156
+          },
+          "hasMap": "https://maps.google.com/?q=26.8920,75.8156",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "09:00",
+              "closes": "20:00"
+            }
+          ],
+          "areaServed": [
+            { "@type": "City", "name": "Jaipur" },
+            { "@type": "City", "name": "Jodhpur" },
+            { "@type": "City", "name": "Udaipur" },
+            { "@type": "City", "name": "Kota" },
+            { "@type": "City", "name": "Ajmer" },
+            { "@type": "City", "name": "Bikaner" },
+            { "@type": "City", "name": "Alwar" },
+            { "@type": "City", "name": "Bharatpur" },
+            { "@type": "City", "name": "Sikar" },
+            { "@type": "State", "name": "Rajasthan" },
+            { "@type": "Country", "name": "India" }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/people/KindleWomb/61584375307032/",
+            "https://www.instagram.com/kindlewombivfgroup5",
+            "https://www.youtube.com/@Kindlewombivfgroup5"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "240",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "Physician",
+          "@id": "https://kindlewombivfgroup.com/#dr-girraj-swarnkar",
+          "name": "Dr. Girraj Prasad Swarnkar",
+          "jobTitle": "Consultant Infertility Specialist & Reproductive Endocrinologist",
+          "worksFor": { "@id": "https://kindlewombivfgroup.com/#organization" },
+          "image": "https://kindlewombivfgroup.com/images/drgirraj.jpeg",
+          "description": "MBBS, DNB (Obs & Gynae), Fellowship in Reproductive Medicine. Senior consultant specializing in IVF, recurrent implantation failure, and advanced reproductive medicine.",
+          "medicalSpecialty": "https://schema.org/Gynecologic"
+        },
+        {
+          "@type": "Physician",
+          "@id": "https://kindlewombivfgroup.com/#dr-ssuniti",
+          "name": "Dr. Ssuniti",
+          "jobTitle": "Lead Clinical Embryologist",
+          "worksFor": { "@id": "https://kindlewombivfgroup.com/#organization" },
+          "image": "https://kindlewombivfgroup.com/images/drsuniti.jpeg",
+          "description": "Consultant Clinical Embryologist & Artificial Reproductive Technology Specialist specializing in ICSI micromanipulation, laser hatching, and blastocyst vitrification.",
+          "medicalSpecialty": "https://schema.org/Gynecologic"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kindlewombivfgroup.com/#website",
+          "url": "https://kindlewombivfgroup.com/",
+          "name": "Kindle Womb IVF & Fertility Centre",
+          "publisher": { "@id": "https://kindlewombivfgroup.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://kindlewombivfgroup.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the success rate of IVF at Kindle Womb IVF Jaipur?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kindle Womb IVF achieves a 70% to 85% clinical pregnancy rate per embryo transfer cycle, powered by advanced Level-3 modular embryology cleanrooms, laser-assisted hatching, blastocyst culture, and individualized stimulation protocols."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What fertility treatments are available at Kindle Womb IVF?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kindle Womb provides comprehensive reproductive solutions including In-Vitro Fertilization (IVF), Intracytoplasmic Sperm Injection (ICSI), Intrauterine Insemination (IUI), Blastocyst Culture (Day 5), Laser-Assisted Hatching, Donor Egg/Sperm Programs, Surgical Sperm Retrieval (PESA/TESA/Micro-TESE), Laparoscopic Surgery, and Ovarian Rejuvenation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who are the lead doctors and specialists at Kindle Womb IVF?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The medical team is led by Dr. Girraj Prasad Swarnkar, MBBS DNB (Obs & Gynae) and Fellow in Reproductive Medicine, alongside Dr. Ssuniti, Senior Clinical Embryologist & ART Specialist."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are zero-cost EMI plans available for IVF treatment?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Kindle Womb offers transparent, flexible 0% interest EMI payment plans with no hidden costs to ensure fertility treatments remain accessible and affordable for all couples."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is the Kindle Womb IVF clinic located?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our flagship centre is located at 2nd Floor, House of Doctors, Plot No.4, Lal Niwas, Hira Bagh, Tonk Road, Near SMS Hospital, Jaipur, Rajasthan 302015 with consultation hubs across all major Rajasthan districts."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 
