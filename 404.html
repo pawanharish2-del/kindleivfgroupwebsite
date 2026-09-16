@@ -164,15 +164,68 @@
 
     <!-- Main Header -->
     <header class="main-header">
-        <div class="header-container">
-            <a href="https://kindlewombivfgroup.com/" class="logo-area">
-                <img src="kindle-logo.png" alt="Kindle Womb IVF & Fertility Centre Logo" class="logo-img">
-            </a>
-            <div class="cta-area">
-                <a href="tel:+919119107725" class="cta-button"><i class="fa-solid fa-phone"></i> +91 9119107725</a>
-            </div>
+    <div class="header-container">
+        
+        <!-- Logo Section using image reference -->
+        <a href="/" class="logo-area">
+            <img src="/kindle-logo.png" alt="Kindle Womb IVF & Fertility Centre Logo" class="logo-img">
+        </a>
+
+        <!-- Hamburger Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars menu-icon"></i>
+        </button>
+
+        <!-- Navigation Section -->
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="/" class="nav-item">Home</a></li>
+                <li><a href="/about" class="nav-item">About</a></li>
+                
+                <!-- Services Dropdown Matrix -->
+                <li class="dropdown">
+                    <a href="/services" class="nav-item">Services <i class="fa-solid fa-arrow-down-long arrow-icon"></i></a>
+                    <div class="dropdown-content grid-dropdown">
+                        <div class="dropdown-grid">
+                            <a href="/ivf">IVF <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="/donor-ivf-services">Donor IVF Services <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="/infertility-assessment">Infertility Assessment <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="/iui">IUI <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="/fertility-enhancing-surgeries">Fertility Enhancing Surgeries <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="/advance-technology">Advance Technology <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="/icsi">ICSI <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="/sperm-retrieval">Sperm Retrieval <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            <a href="/contact">Book a Consultation <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="/ivf-center" class="nav-item">IVF Center</a></li>
+                <li><a href="/contact" class="nav-item">Contact</a></li>
+                <li><a href="/gallery" class="nav-item">Gallery</a></li>
+                
+                <!-- Patient Zone Dropdown Flex -->
+                <li class="dropdown">
+                    <a href="#" class="nav-item">Patient Zone <i class="fa-solid fa-arrow-down-long arrow-icon"></i></a>
+                    <div class="dropdown-content flex-dropdown">
+                        <div class="dropdown-flex-container">
+                             <a href="/what-is-surrogacy">What is surrogacy. <i class="fa-solid fa-circle-arrow-right"></i></a>
+                             <a href="/infertility-assessment">What is Infertility? <i class="fa-solid fa-circle-arrow-right"></i></a>
+                             <a href="/frequently-asked-questions">Frequently Asked Questions <i class="fa-solid fa-circle-arrow-right"></i></a>
+                             <a href="/blogs">Blogs <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="cta-area">
+            <a href="tel:+919119107725" class="cta-button">Call Now <i class="fa-solid fa-phone phone-icon"></i></a>
         </div>
-    </header>
+
+    </div>
+</header>
 
     <!-- Error Content -->
     <main class="error-section">
@@ -206,5 +259,21 @@
         </div>
     </main>
 
+
+<script>
+    function toggleMobileMenu() {
+        const navMenu = document.getElementById('navMenu');
+        const icon = document.querySelector('.menu-icon');
+        navMenu.classList.toggle('active');
+        
+        if(navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+        } else {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
+    }
+</script>
 </body>
 </html>
