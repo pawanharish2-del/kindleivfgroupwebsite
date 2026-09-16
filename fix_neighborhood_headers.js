@@ -1,80 +1,214 @@
 const fs = require('fs');
-const path = require('path');
 
-const headerHtmlPath = path.join(__dirname, 'header.html');
-const footerHtmlPath = path.join(__dirname, 'footer.html');
-
-const headerContent = fs.readFileSync(headerHtmlPath, 'utf8');
-const footerContent = fs.readFileSync(footerHtmlPath, 'utf8');
-
-const richHeaderMatch = headerContent.match(/<header class="main-header">[\s\S]*?<\/header>/i);
-if (!richHeaderMatch) {
-    console.error("Could not find <header class=\"main-header\"> in header.html");
-    process.exit(1);
-}
-const richHeader = richHeaderMatch[0];
-
-const richFooterMatch = footerContent.match(/<footer class="site-footer">[\s\S]*?<\/footer>/i);
-if (!richFooterMatch) {
-    console.error("Could not find <footer class=\"site-footer\"> in footer.html");
-    process.exit(1);
-}
-const richFooter = richFooterMatch[0];
-
-const scriptMatch = headerContent.match(/<script>[\s\S]*?function toggleMobileMenu[\s\S]*?<\/script>/i);
-const toggleScript = scriptMatch ? scriptMatch[0] : '';
-
-function updateHtmlFile(filePath) {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Replace <header ...>...</header>
-    if (content.match(/<header[\s\S]*?<\/header>/i)) {
-        content = content.replace(/<header[\s\S]*?<\/header>/i, richHeader);
-        modified = true;
+const galleryItems = [
+    {
+        src: '/images/gallery/gallery2 (1).avif',
+        alt: 'Kindle Womb IVF Consultation & Clinical Infrastructure',
+        category: 'infrastructure',
+        categoryLabel: 'Infrastructure',
+        title: 'Modern Clinical Infrastructure'
+    },
+    {
+        src: '/images/gallery/gallery2 (2).avif',
+        alt: 'Embryology & Advanced Reproductive Cleanroom',
+        category: 'cleanrooms',
+        categoryLabel: 'Embryology Lab',
+        title: 'Embryology & Cleanroom Suite'
+    },
+    {
+        src: '/images/gallery/gallery2 (3).avif',
+        alt: 'Patient Consultation Chambers & Guidance',
+        category: 'consultation',
+        categoryLabel: 'Consultation',
+        title: 'Patient Consultation Chambers'
+    },
+    {
+        src: '/images/gallery/gallery2 (4).avif',
+        alt: 'Diagnostic Ultrasound & Imaging Suite',
+        category: 'cleanrooms',
+        categoryLabel: 'Diagnostics',
+        title: 'Advanced Diagnostic Facility'
+    },
+    {
+        src: '/images/gallery/gallery2 (5).avif',
+        alt: 'Kindle Womb Reception & Patient Care Wing',
+        category: 'infrastructure',
+        categoryLabel: 'Infrastructure',
+        title: 'Reception & Patient Lounge'
+    },
+    {
+        src: '/images/gallery/gallery2 (6).avif',
+        alt: 'Specialized Andrology & Gamete Handling Facility',
+        category: 'cleanrooms',
+        categoryLabel: 'Embryology',
+        title: 'Andrology & Gamete Laboratory'
+    },
+    {
+        src: '/images/gallery/gallery2 (7).avif',
+        alt: 'Private Patient Recovery & Care Suites',
+        category: 'consultation',
+        categoryLabel: 'Care Suites',
+        title: 'Patient Care & Recovery Suite'
+    },
+    {
+        src: '/images/gallery/gallery2 (8).avif',
+        alt: 'Kindle Womb IVF Team & Clinical Staff',
+        category: 'moments',
+        categoryLabel: 'Our Team',
+        title: 'Dedicated Clinical Team'
+    },
+    {
+        src: '/images/gallery/gallery2 (9).avif',
+        alt: 'State-of-the-Art IVF Procedure Room',
+        category: 'cleanrooms',
+        categoryLabel: 'Cleanrooms',
+        title: 'Modern Procedure Cleanroom'
+    },
+    {
+        src: '/images/gallery/gallery2 (10).avif',
+        alt: 'Cryopreservation & Gamete Vitrification Bank',
+        category: 'cleanrooms',
+        categoryLabel: 'Cryo Bank',
+        title: 'Cryopreservation Facility'
+    },
+    {
+        src: '/images/gallery/gallery2 (11).avif',
+        alt: 'Warm & Welcoming Patient Experience Area',
+        category: 'infrastructure',
+        categoryLabel: 'Infrastructure',
+        title: 'Welcoming Care Center'
+    },
+    {
+        src: '/images/gallery/gallery2 (12).avif',
+        alt: 'Specialist Fertility Consultation Room',
+        category: 'consultation',
+        categoryLabel: 'Consultation',
+        title: 'Specialist Consultation Wing'
+    },
+    {
+        src: '/images/gallery/gallery2 (13).avif',
+        alt: 'Patient Counseling & Emotional Support Lounge',
+        category: 'consultation',
+        categoryLabel: 'Patient Care',
+        title: 'Patient Counseling Lounge'
+    },
+    {
+        src: '/images/gallery/gallery2 (14).avif',
+        alt: 'Advanced ICSI & Micromanipulation Equipment',
+        category: 'cleanrooms',
+        categoryLabel: 'Embryology',
+        title: 'Precision Micromanipulation Suite'
+    },
+    {
+        src: '/images/gallery/gallery2 (15).avif',
+        alt: 'Kindle Womb Centre Exterior & Entrance Tonk Road',
+        category: 'infrastructure',
+        categoryLabel: 'Infrastructure',
+        title: 'Kindle Womb Facility Entrance'
+    },
+    {
+        src: '/images/gallery/gallery2 (16).avif',
+        alt: 'Day Care & Post-Procedure Care Wing',
+        category: 'consultation',
+        categoryLabel: 'Day Care',
+        title: 'Comfortable Day Care Suites'
+    },
+    {
+        src: '/images/gallery/gallery2 (17).avif',
+        alt: 'Kindle Womb Community & Awareness Events',
+        category: 'moments',
+        categoryLabel: 'Events',
+        title: 'Health & Fertility Awareness Camps'
+    },
+    {
+        src: '/images/gallery/gallery2 (18).avif',
+        alt: 'Modern IVF Operating & Laparoscopy Suite',
+        category: 'cleanrooms',
+        categoryLabel: 'OT Suite',
+        title: 'Laparoscopic & IVF OT Suite'
+    },
+    {
+        src: '/images/gallery/gallery2 (19).avif',
+        alt: 'Patient Success & Parenthood Milestones',
+        category: 'moments',
+        categoryLabel: 'Milestones',
+        title: 'Joyous Parenthood Milestones'
+    },
+    {
+        src: '/images/gallery/gallery2 (20).avif',
+        alt: 'Clinical Pharmacy & Patient Assistance Desk',
+        category: 'infrastructure',
+        categoryLabel: 'Infrastructure',
+        title: 'Patient Support & Assistance'
+    },
+    {
+        src: '/images/gallery/gallery2 (21).avif',
+        alt: 'Embryologist Monitoring & Time-Lapse Incubators',
+        category: 'cleanrooms',
+        categoryLabel: 'Embryology',
+        title: 'Time-Lapse Incubators & Monitoring'
+    },
+    {
+        src: '/images/gallery/gallery2 (22).avif',
+        alt: 'Celebrating New Life & Happy Families',
+        category: 'moments',
+        categoryLabel: 'Celebrations',
+        title: 'Celebrating Miracle Babies'
+    },
+    {
+        src: '/images/gallery/gallery-photo-4.jpg',
+        alt: 'Kindle Womb IVF Clinic Facility',
+        category: 'infrastructure',
+        categoryLabel: 'Infrastructure',
+        title: 'Clinical Environment & Patient Care'
     }
+];
 
-    // Replace <footer ...>...</footer>
-    if (content.match(/<footer[\s\S]*?<\/footer>/i)) {
-        content = content.replace(/<footer[\s\S]*?<\/footer>/i, richFooter);
-        modified = true;
-    }
+let cardsHtml = '';
+const galleryData = [];
 
-    // Ensure toggleMobileMenu script is present
-    if (toggleScript && !content.includes('function toggleMobileMenu')) {
-        if (content.includes('</body>')) {
-            content = content.replace('</body>', '\n' + toggleScript + '\n</body>');
-        } else {
-            content += '\n' + toggleScript;
-        }
-        modified = true;
-    }
+const categoryColors = {
+    cleanrooms: 'text-brand-gold',
+    infrastructure: 'text-brand-red',
+    consultation: 'text-brand-blue',
+    moments: 'text-brand-goldDark'
+};
 
-    if (modified) {
-        fs.writeFileSync(filePath, content, 'utf8');
-    }
-}
+galleryItems.forEach((item, index) => {
+    galleryData.push({
+        src: item.src,
+        caption: item.title + ' - ' + item.alt
+    });
 
-// 1. Process Root HTML files
-const rootFiles = fs.readdirSync(__dirname).filter(f => f.endsWith('.html') && f !== 'header.html' && f !== 'footer.html' && !f.startsWith('google'));
-console.log(`Synchronizing ${rootFiles.length} root HTML files...`);
-rootFiles.forEach(f => updateHtmlFile(path.join(__dirname, f)));
+    const colorClass = categoryColors[item.category] || 'text-brand-blue';
 
-// 2. Process Location Pages
-const locationPagesDir = path.join(__dirname, 'location-pages');
-if (fs.existsSync(locationPagesDir)) {
-    const locFiles = fs.readdirSync(locationPagesDir).filter(f => f.endsWith('.html'));
-    console.log(`Synchronizing ${locFiles.length} location HTML files...`);
-    locFiles.forEach(f => updateHtmlFile(path.join(locationPagesDir, f)));
-}
+    cardsHtml += '                <!-- ' + (index + 1) + '. ' + item.title + ' -->\n' +
+        '                <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 cursor-pointer" data-category="' + item.category + '" onclick="openLightbox(' + index + ')">\n' +
+        '                    <div class="relative h-64 overflow-hidden bg-gray-50">\n' +
+        '                        <img src="' + item.src + '" alt="' + item.alt + '" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">\n' +
+        '                        <div class="gallery-overlay absolute inset-0 bg-brand-dark/60 flex items-center justify-center text-white text-3xl">\n' +
+        '                            <i class="ph ph-magnifying-glass-plus"></i>\n' +
+        '                        </div>\n' +
+        '                    </div>\n' +
+        '                    <div class="p-4 bg-white">\n' +
+        '                        <span class="text-xs font-bold ' + colorClass + ' uppercase tracking-wide">' + item.categoryLabel + '</span>\n' +
+        '                        <h3 class="font-heading text-lg text-brand-dark font-medium mt-1">' + item.title + '</h3>\n' +
+        '                    </div>\n' +
+        '                </div>\n\n';
+});
 
-// 3. Process Posts
-const postsDir = path.join(__dirname, 'posts');
-if (fs.existsSync(postsDir)) {
-    const postFiles = fs.readdirSync(postsDir).filter(f => f.endsWith('.html'));
-    console.log(`Synchronizing ${postFiles.length} post HTML files...`);
-    postFiles.forEach(f => updateHtmlFile(path.join(postsDir, f)));
-}
+let galleryHtml = fs.readFileSync('gallery.html', 'utf8');
 
-console.log("=== Master Header and Footer synchronized across all site pages successfully! ===");
+const containerRegex = /<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryContainer">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/;
+
+const newGridHtml = '<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryContainer">\n' + cardsHtml + '            </div>\n        </div>\n    </section>';
+
+galleryHtml = galleryHtml.replace(containerRegex, newGridHtml);
+
+const dataRegex = /const galleryData = \[[\s\S]*?\];/;
+galleryHtml = galleryHtml.replace(dataRegex, 'const galleryData = ' + JSON.stringify(galleryData, null, 4) + ';');
+
+fs.writeFileSync('gallery.html', galleryHtml, 'utf8');
+console.log('Successfully updated gallery.html with ' + galleryItems.length + ' gallery images!');
+
 
