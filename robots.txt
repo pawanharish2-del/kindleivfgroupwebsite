@@ -1,60 +1,11 @@
 # ==============================================================================
 # Kindle Womb IVF & Fertility Centre - Robots.txt
 # Canonical Production Domain: https://kindlewombivfgroup.com/
-# Designed for Search Engines (SEO), Answer Engines (AEO), and Generative AI (GEO)
 # ==============================================================================
 
-# Default Search Engine Crawlers
 User-agent: *
 Allow: /
-Allow: /location-pages/
-Allow: /posts/
-Allow: /images/
-Allow: /llms.txt
-Allow: /llms-full.txt
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.webp$
-Allow: /*.avif$
-Allow: /*.svg$
 
-# AI & LLM Search Agents (AEO / GEO Engine Friendly)
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-User-agent: Diffbot
-Allow: /
-
-# Disallow private scripts and templates
-Disallow: /*_runner.js$
-Disallow: /*_audit.js$
-Disallow: /*_engine.js$
-Disallow: /*.json$
-
-# Canonical Sitemaps & AI Manifests
+# Canonical XML Sitemap
 Sitemap: https://kindlewombivfgroup.com/sitemap.xml
-# LLM Manifest for AI Discovery (AEO/GEO): https://kindlewombivfgroup.com/llms.txt
+# LLM Manifest for AI Discovery: https://kindlewombivfgroup.com/llms.txt
