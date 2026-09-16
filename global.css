@@ -419,6 +419,49 @@ body {
     color: var(--bg-pure-white);
 }
 
+/* Global Location Nav in Footer */
+.global-location-nav {
+    background-color: #2F2425;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 30px 40px;
+    margin: 30px 0 20px 0;
+}
+
+.global-location-nav h3 {
+    color: var(--color-golden-yellow, #F2B830);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    font-family: var(--font-heading, 'Marcellus', serif);
+    font-weight: 400;
+}
+
+.global-location-nav h4 {
+    color: #CCCCCC;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.location-links-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    color: #888888;
+}
+
+.location-links-inline a {
+    color: #B0B7C3;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.location-links-inline a:hover {
+    color: var(--color-golden-yellow, #F2B830);
+    text-decoration: underline;
+}
+
 /* ==========================================================================
    4. RESPONSIVE MEDIA QUERIES (Global Breakpoints)
    ========================================================================== */
