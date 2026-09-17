@@ -71,7 +71,7 @@ server.listen(PORT, async () => {
   }
 
   // Also test critical asset URLs
-  const assetUrls = ['/global.css', '/kindle-logo.png', '/favicon.jpg', '/images/best-ivf-center-jaipur.jpg'];
+  const assetUrls = ['/global.css', '/kindle-logo.png', '/faviconkindle.jpg', '/images/best-ivf-center-jaipur.jpg'];
   let assetPassed = 0;
   for (const asset of assetUrls) {
     await new Promise(resolve => {

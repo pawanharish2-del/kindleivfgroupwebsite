@@ -16,7 +16,7 @@ function normalizeContentForUniversalRouting(content, filePath) {
   // Make core CSS & favicon root-relative
   c = c.replace(/href=["'](?:\.\.\/|\.\/)?global\.css["']/g, 'href="/global.css"');
   c = c.replace(/href=["'](?:\.\.\/|\.\/)?location-pages\.css["']/g, 'href="/location-pages/location-pages.css"');
-  c = c.replace(/href=["'](?:\.\.\/|\.\/)?favicon\.jpg["']/g, 'href="/favicon.jpg"');
+  c = c.replace(/href=["'](?:\.\.\/|\.\/)?favicon\.jpg["']/g, 'href="/faviconkindle.jpg"');
   c = c.replace(/src=["'](?:\.\.\/|\.\/)?kindle-logo\.png["']/g, 'src="/kindle-logo.png"');
 
   // Make images root-relative: src="images/xxx" or src="../images/xxx" -> src="/images/xxx"

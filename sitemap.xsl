@@ -10,7 +10,7 @@
         <title>XML Sitemap | Kindle Womb IVF &amp; Fertility Centre</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+        <link rel="icon" type="image/jpeg" href="/faviconkindle.jpg" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet" />
         <style type="text/css">
           body {

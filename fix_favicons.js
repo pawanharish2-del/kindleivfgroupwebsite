@@ -11,7 +11,7 @@ fs.readdirSync(locationPagesDir).forEach(file => {
         // Check if favicon already exists
         if (!content.includes('<link rel="icon"')) {
             // Insert it right after <head>
-            content = content.replace('<head>', '<head>\n    <link rel="icon" type="image/jpeg" href="../favicon.jpg">');
+            content = content.replace('<head>', '<head>\n    <link rel="icon" type="image/jpeg" href="/faviconkindle.jpg">');
             fs.writeFileSync(filePath, content);
             console.log(`Added favicon to ${file}`);
         }
